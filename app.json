@@ -1,0 +1,56 @@
+{
+    "name": "Tag Informer Bot",
+    "description": "Simple Bot For Notifying You When You Were Tagged In A Group.",
+      "logo": "https://telegra.ph/file/7c2bfdec79f87f6dfa5ca.jpg",
+    "keywords": [
+        "telegram",
+        "tags",
+        "logs",
+        "bot",
+        "pyrogram",
+        "tag informer",
+        "taglogger bot",
+        "taglogger"
+    ],
+    "repository": "https://github.com/jankarikiduniya/Tag-Informer",
+    "website": "https://github.com/jankarikiduniya",
+    "success_url": "https://github.com/jankarikiduniya",
+    "env": {
+        "HEROKU": {
+            "description": "Setting this to ANYTHING will enable Heroku, turned on by default!",
+            "value": "ANYTHING"
+        },
+        "API_ID": {
+            "description": "Get this value from my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get this value from my.telegram.org",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Get this from @BotFather",
+            "required": true
+        },
+        "SESSION": {
+            "description": "Pyrogram String Session",
+            "required": true
+        },
+        "GROUP_ID": {
+            "description": "Logs Group ID for some Tracking. Example: -1001717283097",
+            "value": "-1001717283097",
+            "required": true
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
